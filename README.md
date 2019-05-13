@@ -15,7 +15,13 @@ Let's build a react giphy app!
 
 * The app should show a "loading..." message until the fetch call has been completed
 * You have an application that renders a button on page load.
-* When a user clicks the button, a random Gif appears on the screen.
+* When a user clicks the button, 
+    - the GIF's title appears at the top
+    - The display of the user who uploaded the gif appears on the screen
+    - a random Gif appears on the screen.
+
+*HINT*: Start by finding these 3 bits of data in the JSON response
+
 
 #### HW Submission
 
@@ -23,8 +29,14 @@ Let's build a react giphy app!
 * Create a pull request 
 
 
-#### BONUS Allow User To Search Gifs
+#### BONUS 1: Favorite GIF:
+* On the side of the page (or wherever) there should be a "favorite" box, that starts out empty. Give the users a "favorite" button under the GIFs, which, when clicked, displays gif's title in the favorite box; the title should remain there until another GIF is clicked.
+
+
+#### BONUS 2: Gifs Searching
 
 * Add an input field that allows the user to add a search term
 
 
+
+show title and display name
