@@ -1,7 +1,7 @@
 ![giphy-fun](https://media.giphy.com/media/26xBKJclSF8d57UWs/giphy.gif)
 
 ### :sunny: Cheer App!
-
+ 
 Let's build a react giphy app!
 
 #### Your task is:
@@ -11,9 +11,21 @@ Let's build a react giphy app!
 * The Request URL field should have been updated. Look for the part in the URL that says `api_key=`. Place your API key right after that. This is the URL that you will use to make the API call to in your React application.
 * Create an app the starts out with a button and when the user clicks the button a random gif appears
 
+### Install Axios
+- run 
+    ```
+    npm install --save axios
+    ```
+    from your root directory.
+
+- add this line to the top of App.js
+```js
+import 'axios';
+```
+
 #### 🚀 Completion looks like:
 
-* The app should show a "loading..." message until the fetch call has been completed
+* The app should show a "loading..." message until the fetch call has been completed (optional)
 * You have an application that renders a button on page load.
 * When a user clicks the button, 
     - the GIF's title appears at the top
@@ -38,5 +50,3 @@ Let's build a react giphy app!
 * Add an input field that allows the user to add a search term
 
 
-
-show title and display name
