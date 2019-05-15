@@ -20,7 +20,7 @@ Let's build a react giphy app!
 
 - add this line to the top of App.js
 ```js
-import 'axios';
+import axios from 'axios';
 ```
 
 #### 🚀 Completion looks like:
