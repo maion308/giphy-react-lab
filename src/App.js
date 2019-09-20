@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
+import { URL } from './Constants'
 
 /* 
  * Perhaps some hints?
@@ -12,15 +14,22 @@ import './App.css';
  */
 
 class App extends Component {
-    // this.state = {
+  constructor(props){
+    super(props)
+    this.state = {
+      gifs: ""
+    }
+  }
 
-    // }
 
 
-  fetchRandomGif() {
-    // declare a url variable for the Giphy API endpoint
-    // get a random gif!
-    // set state with the data you've fetched from the API to allGifs
+  async fetchRandomGif() {
+    try {
+      const response = await axios.get(URL);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
 
