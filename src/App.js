@@ -45,9 +45,9 @@ fetchRandomGif = async () => {
         <main>
           <p>I'm going to show a random of gifs!</p>
           <button onClick={this.fetchRandomGif}>random gif</button>
-          <p>{this.state.title}</p>
-          <p>{this.state.source}</p>
           <img src={this.state.gif.url}></img>
+          <p>{this.state.title}</p> 
+          <p>{this.state.source}</p>
         </main>
       </div>
     );
