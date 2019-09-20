@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .App {
   text-align: center;
 }
@@ -11,4 +17,17 @@
 
 .App-title {
   font-size: 1.5em;
+}
+
+
+button{
+  border-radius: 25px;
+  background-color: #ddd;
+  outline: none;
+  width: 50%;
+  height: 50px;
+}
+
+button:active{
+  background-color: green;
 }

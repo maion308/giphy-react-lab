@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import { URL } from './Constants'
+import { CLIENT_URL } from './Constants';
 
 /* 
  * Perhaps some hints?
@@ -14,25 +14,27 @@ import { URL } from './Constants'
  */
 
 class App extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      gifs: ""
+      gif: "",
+      title: "",
+      source: ""
     }
-  }
+}
 
+fetchRandomGif = async () => {
+  axios.get(CLIENT_URL)
+      .then( response => {
+        this.setState({
+          gif: response.data.data.images.original,
+          title:response.data.data.title,
+          source:response.data.data.source
+        })
+      })
+      .catch( err => console.log(err))
 
-
-  async fetchRandomGif() {
-    try {
-      const response = await axios.get(URL);
-      console.log(response);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-
+}
 
   render() {
     return (
@@ -41,7 +43,11 @@ class App extends Component {
           <h1 className="App-title">Welcome to React Giphy</h1>
         </header>
         <main>
-          I'm going to show a random of gifs!
+          <p>I'm going to show a random of gifs!</p>
+          <button onClick={this.fetchRandomGif}>random gif</button>
+          <p>{this.state.title}</p>
+          <p>{this.state.source}</p>
+          <img src={this.state.gif.url}></img>
         </main>
       </div>
     );
